@@ -195,3 +195,9 @@ VALUES
 
 create table auditoria(id int not null auto_increment, vendedor_fk int not null, cliente_fk int not null, accion varchar(50) not null, total double, primary key (id), foreign key (vendedor_fk) references vendedor(id), foreign key (cliente_fk) references cliente(id));
 
+update venta set total=(select sum(subtotal) from detalle_venta where venta_fk=1) where id=1;
+
+update venta set total=(select sum(subtotal) from detalle_venta where venta_fk=2) where id=2;
+
+update venta set total=(select sum(subtotal) from detalle_venta where venta_fk=3) where id=3;
+
