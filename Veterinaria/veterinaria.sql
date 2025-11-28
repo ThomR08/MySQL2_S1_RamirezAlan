@@ -884,4 +884,3 @@ BEGIN
   WHERE stock = 0;
 END; $$
 DELIMITER ;
-
